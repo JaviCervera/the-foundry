@@ -1,0 +1,20 @@
+name: QA
+on:
+  push:
+  pull_request:
+jobs:
+  ruff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+      - name: Install ruff 📥
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff
+      - name: Ruff check 🔧
+        run: ruff check .
