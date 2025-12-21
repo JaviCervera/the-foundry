@@ -15,7 +15,7 @@ class Metal:
 
     def __add__(self, other: "Metal") -> "Metal":
         if not isinstance(other, Metal):
-            raise MetalError(f"Can't add {type(other).__name__} to Metal")
+            raise MetalError(f"Cannot add {type(other).__name__} to Metal")
         return Metal(self._amount + other._amount)
 
     def __int__(self) -> int:

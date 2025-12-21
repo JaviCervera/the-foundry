@@ -26,3 +26,9 @@ def test_cannot_create_metal_with_negative_amount():
     with pytest.raises(MetalError) as exc:
         Metal(-1)
     assert str(exc.value) == "Metal amount cannot be negative, got -1"
+
+
+def test_cannot_add_other_type_to_metal():
+    with pytest.raises(MetalError) as exc:
+        Metal(1) + 2
+    assert str(exc.value) == "Cannot add int to Metal"
