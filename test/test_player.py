@@ -1,8 +1,8 @@
-from src.model.level import Level
-from src.model.metal import Metal
-from src.model.player import Player
-from src.model.player_id import PlayerId
-from src.model.power import Power
+from core.level import Level
+from core.metal import Metal
+from core.player import Player
+from core.player_id import PlayerId
+from core.power import Power
 
 
 def test_power_is_mine_level_plus_twice_military_level():

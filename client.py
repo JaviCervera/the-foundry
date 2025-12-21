@@ -1,4 +1,4 @@
-from src.window import Window
+from client.window import Window
 
 
 def main() -> None:

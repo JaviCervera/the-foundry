@@ -1,6 +1,6 @@
 import pytest
 
-from src.model.power import Power, PowerError
+from core.power import Power, PowerError
 
 
 def test_can_create_power_from_int():

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from ..model.player import Player
+from core.player import Player
 
 
 @dataclass(frozen=True)

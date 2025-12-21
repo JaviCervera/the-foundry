@@ -1,6 +1,6 @@
 import pytest
 
-from src.model.player_id import PlayerId, PlayerIdError
+from core.player_id import PlayerId, PlayerIdError
 
 
 def test_can_create_player_id_from_int():

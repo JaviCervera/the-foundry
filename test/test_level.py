@@ -1,6 +1,6 @@
 import pytest
 
-from src.model.level import Level, LevelError
+from core.level import Level, LevelError
 
 
 def test_can_create_level_from_int():

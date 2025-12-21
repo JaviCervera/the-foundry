@@ -1,8 +1,8 @@
-from src.action.attack import attack
-from src.model.level import Level
-from src.model.metal import Metal
-from src.model.player import Player
-from src.model.player_id import PlayerId
+from server.attack import attack
+from core.level import Level
+from core.metal import Metal
+from core.player import Player
+from core.player_id import PlayerId
 
 
 def test_attacker_wins_attack_if_has_more_power():
