@@ -13,7 +13,7 @@ class Player:
     metal: Metal
     mine_level: Level
     military_level: Level
-    last_upgrade_time: Timestamp = Timestamp(0.0)
+    last_upgrade_time: Timestamp
 
     @property
     def power(self) -> Power:

@@ -11,6 +11,15 @@ def test_can_add_metal_resources():
     assert Metal(1) + Metal(2) == Metal(3)
 
 
+def test_can_subtract_metal_resources():
+    assert Metal(10) - Metal(2) == Metal(8)
+
+
+def test_can_multiply_metal_by_number():
+    assert Metal(100) * 0.3 == Metal(30)
+    assert Metal(100) * 2 == Metal(200)
+
+
 def test_can_convert_resource_to_str():
     assert str(Metal(10)) == "Metal(10)"
 
@@ -31,3 +40,9 @@ def test_cannot_add_other_type_to_metal():
     with pytest.raises(MetalError) as exc:
         Metal(1) + 2
     assert str(exc.value) == "Cannot add int to Metal"
+
+
+def test_cannot_subtract_other_type_to_metal():
+    with pytest.raises(MetalError) as exc:
+        Metal(1) - 2
+    assert str(exc.value) == "Cannot subtract int from Metal"

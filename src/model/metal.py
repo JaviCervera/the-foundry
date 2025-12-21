@@ -20,6 +20,14 @@ class Metal:
             raise MetalError(f"Cannot add {type(other).__name__} to Metal")
         return Metal(self._amount + other._amount)
 
+    def __sub__(self, other: "Metal") -> "Metal":
+        if not isinstance(other, Metal):
+            raise MetalError(f"Cannot subtract {type(other).__name__} from Metal")
+        return Metal(self._amount - other._amount)
+
+    def __mul__(self, scalar: int | float) -> "Metal":
+        return Metal(int(self._amount * scalar))
+
     def __int__(self) -> int:
         return self._amount
 
