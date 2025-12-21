@@ -17,10 +17,12 @@ def test_can_convert_resource_to_str():
 
 
 def test_cannot_create_metal_with_non_int_amount():
-    with pytest.raises(MetalError):
+    with pytest.raises(MetalError) as exc:
         Metal(1.5)
+    assert str(exc.value) == "Metal amount must be int, not float"
 
 
 def test_cannot_create_metal_with_negative_amount():
-    with pytest.raises(MetalError):
+    with pytest.raises(MetalError) as exc:
         Metal(-1)
+    assert str(exc.value) == "Metal amount cannot be negative, got -1"

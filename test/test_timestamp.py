@@ -20,5 +20,6 @@ def test_can_convert_timestamp_to_str():
 
 
 def test_cannot_create_timestamp_from_other_type():
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError) as exc:
         Timestamp(1234)
+    assert str(exc.value) == "Timestamp must be initialized with float or datetime, got int"
