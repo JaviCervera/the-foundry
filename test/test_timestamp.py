@@ -2,8 +2,7 @@ from datetime import datetime
 
 import pytest
 
-from src.model.timestamp import Timestamp
-from src.model.timestamp_error import TimestampError
+from src.model.timestamp import Timestamp, TimestampError
 
 
 def test_can_create_timestamp_from_float():

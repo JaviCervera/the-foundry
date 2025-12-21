@@ -1,7 +1,9 @@
 from dataclasses import dataclass
 from datetime import datetime
 
-from .timestamp_error import TimestampError
+
+class TimestampError(Exception):
+    pass
 
 
 @dataclass(frozen=True)

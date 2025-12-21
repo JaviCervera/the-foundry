@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 
-from .metal_error import MetalError
+
+class MetalError(Exception):
+    pass
 
 
 @dataclass(frozen=True)

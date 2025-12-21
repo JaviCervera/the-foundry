@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 
-from .level_error import LevelError
+
+class LevelError(Exception):
+    pass
 
 
 @dataclass(frozen=True)

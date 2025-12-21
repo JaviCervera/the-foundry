@@ -1,7 +1,6 @@
 import pytest
 
-from src.model.metal import Metal
-from src.model.metal_error import MetalError
+from src.model.metal import Metal, MetalError
 
 
 def test_can_create_metal_from_int():
