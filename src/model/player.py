@@ -4,7 +4,6 @@ from .level import Level
 from .metal import Metal
 from .player_id import PlayerId
 from .power import Power
-from .timestamp import Timestamp
 
 
 @dataclass(frozen=True)
@@ -13,7 +12,6 @@ class Player:
     metal: Metal
     mine_level: Level
     military_level: Level
-    last_upgrade_time: Timestamp
 
     @property
     def power(self) -> Power:
