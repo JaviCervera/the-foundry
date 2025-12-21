@@ -1,10 +1,6 @@
 from dataclasses import dataclass
 
-from ..model.level import Level
-from ..model.metal import Metal
 from ..model.player import Player
-from ..model.player_id import PlayerId
-from ..model.power import Power
 
 
 @dataclass(frozen=True)
