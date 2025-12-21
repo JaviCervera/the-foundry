@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from datetime import datetime
 
+from .timestamp_error import TimestampError
+
 
 @dataclass(frozen=True)
 class Timestamp:
@@ -10,9 +12,14 @@ class Timestamp:
         if isinstance(self._ts, datetime):
             object.__setattr__(self, "_ts", self._ts.timestamp())
         elif not isinstance(self._ts, float):
-            raise ValueError(
+            raise TimestampError(
                 f"Timestamp must be initialized with float or datetime, got {type(self._ts).__name__}"
             )
+
+    def __add__(self, other: "Timestamp") -> "Timestamp":
+        if not isinstance(other, Timestamp):
+            raise TimestampError(f"Cannot add {type(other).__name__} to Timestamp")
+        return Timestamp(self._ts + other._ts)
 
     def __float__(self) -> float:
         return self._ts
