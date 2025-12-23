@@ -1,11 +1,11 @@
-from client.window import Window
+from client.screen import Screen
 
 
 def main() -> None:
-    win = Window()
-    while win.update():
-        win.draw()
-    win.close()
+    screen = Screen()
+    while screen.update():
+        screen.draw()
+    screen.close()
 
 
 if __name__ == "__main__":

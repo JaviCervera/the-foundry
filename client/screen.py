@@ -1,7 +1,7 @@
 import pyray as rl
 
 
-class Window:
+class Screen:
     _FONT_SIZE = 20
     _BUTTON_Y_OFFSET = 40
 
